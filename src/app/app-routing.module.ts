@@ -1,7 +1,18 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
+import { AcceuilComponent } from './acceuil/acceuil.component';
+import { DetailHotelComponent } from './detail-hotel/detail-hotel.component';
+import { LoginComponent } from './login/login.component';
 
-const routes: Routes = [];
+const routes: Routes = [
+  { path: 'acceuil', component: AcceuilComponent  },
+  {path: 'acceuil/:id', component:DetailHotelComponent},
+ { path: 'login', component: LoginComponent },
+ {path:'',redirectTo:'acceuil', pathMatch:'full'}
+   
+ 
+ 
+ ];
 
 @NgModule({
   imports: [RouterModule.forRoot(routes)],
